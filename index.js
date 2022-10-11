@@ -1,5 +1,6 @@
 const letter = document.getElementById("letter");
 const header = document.getElementById("mainHeader");
+let counter = 0;
 
 
 document.addEventListener('keydown', function (e) {
@@ -11,3 +12,9 @@ document.addEventListener('keydown', function (e) {
     header.style.color = `#${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}`
 });
 
+document.addEventListener('mousemove', function (e) {
+    if (e.type === "mousemove") {
+        ++counter;
+        header.style.fontSize = `${32 + (0.5 * Math.sin(counter*2))}pt`;
+    }
+})
