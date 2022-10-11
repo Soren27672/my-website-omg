@@ -9,7 +9,9 @@ document.addEventListener('keydown', function (e) {
     letterAngle = letterAngle.replace('deg)','');
     letterAngle++;
     letter.style.transform = `rotate(${letterAngle}deg)`;
-    header.style.color = `#${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}`
+    let randomHex = `#${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}${Math.floor(Math.random()*10)}`;
+    header.style.color = randomHex;
+    letter.style.color = randomHex;
 });
 
 document.addEventListener('mousemove', function (e) {
